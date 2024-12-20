@@ -94,18 +94,26 @@ Ref: assignments.customerId > customers.id
 ### Python moduls
 
 The necessary python moduls:
-- to the database
-- to the CRUD
-- to the user interface 
+- [] to the database
+- [] to the CRUD
+- [] to the user interface 
 
 ### DB
 
-Creating / generating the model.py file
+- [] Creating / generating the model.py file
 
 ### Software
 
-Using the forms
-Creating the main.py
-Creating the forms.py
+- [] Using the forms
+- [] Creating the main.py
+- [] Creating the forms.py
+- [] Creating reports, filters
+- [] Authorization system with at least 3 roles: 
+  - admin
+  - project leder
+  - worker
+- [] Calender view where user can add / edit workload
 
 ### Test
+
+- [] Test the functions as they developed
