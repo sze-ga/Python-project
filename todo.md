@@ -12,8 +12,7 @@ The main goal is to track the workload of workers in the company, and showing so
 
 ### Database design
 
-´´´
-
+```
 Table users {
   id integer [primary key]
   username varchar
@@ -88,8 +87,7 @@ Ref: assignments.projectId > projects.id
 Ref: assignments.userId > users.id
 Ref: assignments.taskId > tasks.id
 Ref: assignments.customerId > customers.id
-
-´´´
+```
 
 ## Tasks to do
 
