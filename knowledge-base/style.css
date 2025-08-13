@@ -1,0 +1,168 @@
+/* Globális stílusok */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Világosabb, semlegesebb háttér */
+    color: #343a40; /* Sötétszürke szöveg */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Navigációs panel (TOC) stílusa */
+.toc-panel {
+    flex-shrink: 0;
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05); /* Enyhébb árnyék */
+    padding: 24px;
+    overflow-y: auto;
+    border-right: 1px solid #e9ecef;
+}
+
+.app-title {
+    margin: 0 0 15px 0;
+    font-size: 28px; /* Kicsit nagyobb cím */
+    color: #495057; /* Sötétebb cím */
+    font-weight: 700;
+}
+
+/* Keresőmező stílusa */
+#search-input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+#toc-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#toc-nav li a {
+    display: block;
+    padding: 12px 18px; /* Tágasabb belső margó */
+    margin: 6px 0;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 10px; /* Lekerekítettebb sarkok */
+    transition: background-color 0.2s, color 0.2s, transform 0.2s; /* Hozzáadott transform átmenet */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#toc-nav li a:hover {
+    background-color: #e2eafc; /* Enyhe kék háttér hover esetén */
+    color: #004085; /* Sötétebb kék szöveg */
+    transform: translateX(5px); /* Enyhe eltolás jobbra a hover hatására */
+}
+
+#toc-nav li a.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Aktív elem kiemelése */
+}
+
+#toc-nav .category {
+    font-weight: bold;
+    padding: 15px 0 5px 0; /* Megnövelt térköz */
+    color: #343a40;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#toc-nav .category-item {
+    padding-left: 20px;
+}
+
+/* Tartalom panel stílusa */
+.content-panel {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+#content-display {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px; /* Még lekerekítettebb sarkok */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* Enyhébb, de nagyobb árnyék */
+}
+
+/* Markdown stílusok a tartalomhoz */
+#content-display h1, #content-display h2, #content-display h3 {
+    color: #212529;
+    margin-top: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dee2e6; /* Enyhébb elválasztóvonal */
+}
+
+#content-display h1 { font-size: 2.2em; }
+#content-display h2 { font-size: 1.8em; }
+#content-display h3 { font-size: 1.4em; }
+
+#content-display p {
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+#content-display ul, #content-display ol {
+    margin-bottom: 16px;
+    padding-left: 20px;
+}
+
+#content-display li {
+    line-height: 1.6;
+}
+
+#content-display pre {
+    background-color: #f1f3f5;
+    padding: 16px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+}
+
+/* Reszponzív stílusok */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .toc-panel {
+        width: 100%;
+        min-height: 200px;
+        max-height: 50vh;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    #search-input {
+        width: calc(100% - 30px);
+    }
+
+    .content-panel {
+        padding: 20px;
+    }
+}

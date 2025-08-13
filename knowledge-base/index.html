@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudásbázis</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Highlight.js a szintaxis kiemeléshez -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigációs panel (TOC) -->
+        <aside class="toc-panel">
+            <h1 class="app-title">Tudásbázis</h1>
+            <input type="text" id="search-input" placeholder="Keresés...">
+            <nav id="toc-nav"></nav>
+        </aside>
+
+        <!-- Tartalom megjelenítő panel -->
+        <main class="content-panel">
+            <div id="content-display">
+                <h2>Üdvözöljük a Tudásbázisban!</h2>
+                <p>Válasszon egy témát a bal oldali menüből a kezdéshez.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- A 'marked' könyvtár a Markdown konvertáláshoz -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- A 'highlight.js' könyvtár a szintaxis kiemeléshez -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
