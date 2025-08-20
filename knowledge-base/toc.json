@@ -1,0 +1,25 @@
+[
+  {
+    "path": "welcome.md",
+    "parts": [
+      "welcome"
+    ],
+    "title": "Brug af Vidensbasen"
+  },
+  {
+    "path": "TipAndTrick/TipAndTrick_lukketbillede.md",
+    "parts": [
+      "TipAndTrick",
+      "lukketbillede"
+    ],
+    "title": "Lukket billede"
+  },
+  {
+    "path": "HowTo/HowTo_tema1.md",
+    "parts": [
+      "HowTo",
+      "tema1"
+    ],
+    "title": "Tema 1 Eksempel"
+  }
+]
